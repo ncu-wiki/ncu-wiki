@@ -1,0 +1,123 @@
+# [Info]
+site_name: ncu-wiki # 左上角的标题
+site_url: https://github.com/ncu-wiki/ncu-wiki #这个是home page的位置，比如https://xiaoximvp.github.io，serve的话就会运行在http://127.0.0.1:8000
+site_author: ncu-wiki
+site_description: ncu-wiki
+
+# [Extra]
+extra_css:
+  - stylesheets/basic.css
+  - stylesheets/admonition.css
+  - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.css
+
+# [UI]
+## [top]
+theme:
+  name: material
+  # font:
+  #   text: Source Sans Pro
+  #   code: Source Code Pro
+  features: 
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs # 使用Tab来进行分类
+    - navigation.top # 返回顶部的按钮 在上滑时出现
+    - navigation.indexes # Tab会有一个index.md 而不是在打开Tab时打开第一篇文章
+    - search.suggest # 搜索输入一些字母时推荐补全整个单词
+    - search.highlight # 搜索出的文章关键词加入高亮
+  language: zh # 一些提示性的文字会变成中文
+  icon:
+    repo: fontawesome/brands/github
+
+  # 调色板
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default # 日间模式
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+      primary: white
+      accent: pink
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+      primary: blue grey
+      accent: pink
+
+# edit_uri: edit/main/docs # 编辑按钮跳转的链接
+
+## [top-right corner]
+repo_url: https://github.com/ncu-wiki/ncu-wiki # 右上角点击跳转的链接
+repo_name: ncu-wiki # 右上角的名字
+## [bottom-left corner]
+copyright: Copyright &copy; 2023 ncu-wiki # 左下角的版权声明
+## [bottom-right corner]
+
+extra:
+  social: # icons
+    - icon: fontawesome/brands/github
+      link: https://github.com/ncu-wiki/ncu-wiki
+      name: GitHub | ncu-wiki
+
+# [Navigation]
+nav:
+  - 简介: 
+    - index.md
+  - 课程: # 四年课程 选修课
+    - course/1.md
+  - 大学规划: # 保研 考研 考公 工作
+    - plan/1.md
+  - 导航: 
+    - nav/1.md
+  - 讨论区:
+    - discussion/1.md
+
+
+
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      title: Content
+  - tables
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbr.md
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic:
+      mode: view
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji 
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      # linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - meta
+  
